@@ -10,8 +10,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully<br>";
-
-$query = "SELECT * FROM reports;";
+$date = gmdate('Y-m-d');
+$query = "SELECT * FROM reports WHERE date = \"{$date}\";";
 $reports = $conn->query($query);
 
 ?>
@@ -24,11 +24,13 @@ $reports = $conn->query($query);
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <?php include("header.php"); ?>
     <table>
       <tr>
         <td>Name</td>
         <td>Snowfall</td>
         <td>Price</td>
+        <td>Date</td>
       </tr>
       <?php
       if ($reports->num_rows > 0) {
@@ -39,11 +41,15 @@ $reports = $conn->query($query);
             echo "<td>{$resort['name']}</td>";
             echo "<td>{$row['snowfall']}</td>";
             echo "<td>{$row['price']}</td>";
+            echo "<td>{$row['date']}</td>";
             echo "</tr>";
           }
       }
       ?>
     </table>
+    <h2>
+    <a href = "test.php"> Resorts</a>
+    </h2>
   </body>
 </html>
 <?php
