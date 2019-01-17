@@ -1,0 +1,97 @@
+header{
+  position: fixed;
+  background-color: white;
+  border-style: hidden hidden solid hidden;
+  border-color: #225500;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 ;
+  overflow: hidden;
+  background: white;
+  float: left;
+}
+li {
+  position: sticky;
+  display: inline;
+  float: left;
+}
+.header-link {
+  margin-top: 33px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+}
+a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.hover){
+  background: #225500;
+  color: white ;
+}
+li a.active {
+  background-color: #225500;
+  color: white;
+}
+li input{
+  display: block;
+  text-align:center;
+  float: right;
+  padding: 14px 16;
+  margin: 15px 0;
+}
+.column {
+  border-style: solid;
+  border-color: #225500;
+  text-align: center;
+  height: 500px;
+  float: left;
+  padding: 25px;
+  width: 25%;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid brown;
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid brown;
+  padding: 0;
+  width: 200px;
+  height: 100px;
+}
+table,th,td {
+  border: 1px solid brown;
+  background-color: white;
+}
+body{
+  width: 85% ;
+  margin: auto;
+  margin-top: 10px;
+
+}
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 40px;
+   background-color: rgb(118, 120, 119);
+   color: white;
+   text-align: left;
+}
+h1{
+  background-color: #225500;
+  text-align: right;
+}
